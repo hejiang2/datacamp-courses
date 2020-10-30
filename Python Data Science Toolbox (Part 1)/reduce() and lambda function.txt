@@ -1,0 +1,13 @@
+# The reduce() function is useful for performing some computation on a list and, unlike map() and filter(), returns a single value as a result.
+# functools.reduce(): Apply function of two arguments cumulatively to the items of iterable, from left to right, so as to reduce the iterable to a single value. For example, reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates ((((1+2)+3)+4)+5). The left argument, x, is the accumulated value and the right argument, y, is the update value from the iterable.
+# Import reduce from functools
+from functools import reduce
+
+# Create a list of strings: stark
+stark = ['robb', 'sansa', 'arya', 'brandon', 'rickon']
+
+# Use reduce() to apply a lambda function over stark: result
+result = reduce(lambda item1, item2: item1+item2, stark)
+
+# Print the result
+print(result)
